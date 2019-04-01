@@ -52,36 +52,30 @@ public class MainApplicationClass implements CommandLineRunner {
 
         // Create list of access record
         List<Object[]> rightsList = new ArrayList<Object[]>();
-        Object[] r1 = {1,1,12205, "ReadAccountsDetail"};
+        Object[] r1 = {1,1,12205, "Read"};
         rightsList.add(r1);
-        Object[] r2 = {2,1,12205, "ReadBalances"};
+        Object[] r2 = {2,1,12205, "Pay"};
         rightsList.add(r2);
-        Object[] r3 = {3,1,12205, "ReadTransactionsDetail"};
+        Object[] r3 = {3,1,12205, "Deposit"};
         rightsList.add(r3);
-        Object[] r4 = {4,1,24000, "ReadAccountsDetail"};
+        Object[] r4 = {4,1,24000, "Read"};
         rightsList.add(r4);
-        Object[] r5 = {5,1,24000, "ReadBalances"};
+        Object[] r5 = {5,1,24000, "Pay"};
         rightsList.add(r5);
-        Object[] r6 = {6,1,24000, "ReadTransactionsDetail"};
+        Object[] r6 = {6,1,24000, "Deposit"};
         rightsList.add(r6);
-        Object[] r7 = {7,1,34999, "ReadAccountsDetail"};
+        Object[] r7 = {7,1,34999, "Read"};
         rightsList.add(r7);
-        Object[] r8 = {8,1,34999, "ReadBalances"};
+        Object[] r8 = {8,1,34999, "Pay"};
         rightsList.add(r8);
-        Object[] r9 = {9,1,34999, "ReadTransactionsDetail"};
+        Object[] r9 = {9,1,34999, "Deposit"};
         rightsList.add(r9);
-        Object[] r10 = {10,2,12205, "ReadAccountsDetail"};
+        Object[] r10 = {10,2,12205, "Read"};
         rightsList.add(r10);
-        Object[] r11 = {11,2,12205, "ReadBalances"};
+        Object[] r11 = {12,2,15000, "Read"};
         rightsList.add(r11);
-        Object[] r12 = {12,2,15000, "ReadAccountsDetail"};
+        Object[] r12 = {14,2,25000, "Read"};
         rightsList.add(r12);
-        Object[] r13 = {13,2,15000, "ReadBalances"};
-        rightsList.add(r13);
-        Object[] r14 = {14,2,25000, "ReadAccountsDetail"};
-        rightsList.add(r14);
-        Object[] r15 = {15,2,25000, "ReadBalances"};
-        rightsList.add(r15);
         // Use stream to print out each tuple of the list
         rightsList.forEach(access -> log.info(String.format("Inserting right record for user with id %s to account %s with the permission %s", access[1], access[2], access[3])));
 
